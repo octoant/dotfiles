@@ -510,6 +510,7 @@ live_config_reload: true
 shell:
   program: /bin/fish
   args:
+    - --login
     - --command=tmux
 
 mouse:
