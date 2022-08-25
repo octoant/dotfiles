@@ -1,6 +1,6 @@
 local api = require('core.api')
 
-api.load_editor_opts({
+api.load_opts({
   wrap           = false, -- long lines wrap
   lazyredraw     = true,  -- don't redraw while executing macros
   number         = true,  -- show the line number for each line
