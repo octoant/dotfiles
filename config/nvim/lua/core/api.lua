@@ -1,6 +1,6 @@
-local api = {}
+local mod = {}
 
-function api.load_opts(options)
+function mod.load_opts(options)
   if type(options) ~= 'table' then
     error('table expected')
   end
@@ -10,4 +10,4 @@ function api.load_opts(options)
   end
 end
 
-return api
+return mod
