@@ -1,0 +1,2 @@
+DOTFILES_HOME=$HOME/.dotfiles
+WAKATIME_HOME=$DOTFILES_HOME/config/wakatime
