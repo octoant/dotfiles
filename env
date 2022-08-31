@@ -1,4 +1,5 @@
 EDITOR=nvim
 
 DOTFILES_HOME=$HOME/.dotfiles
+TMUX_HOME=$DOTFILES_HOME/config/tmux
 WAKATIME_HOME=$DOTFILES_HOME/config/wakatime
