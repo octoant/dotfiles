@@ -1,0 +1,17 @@
+{
+  "name": "Dotfiles Sandbox",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainer-community/devcontainer-features/chezmoi.io:1": {}
+  },
+  "postCreateCommand": "mkdir -p ~/.local/share && ln -sfn ${containerWorkspaceFolder} ~/.local/share/chezmoi && chezmoi init --apply",
+  "customizations": {
+    "vscode": {
+    }
+  },
+  "remoteUser": "vscode",
+  "hostRequirements": {
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/${localWorkspaceFolderBasename},type=bind",
+  "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}"
+}
