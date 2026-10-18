@@ -1,8 +1,8 @@
 {
   "name": "Dotfiles Sandbox",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-  "features": {
-    "ghcr.io/devcontainer-community/devcontainer-features/chezmoi.io:1": {}
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
   },
   "postCreateCommand": "mkdir -p ~/.local/share && ln -sfn ${containerWorkspaceFolder} ~/.local/share/chezmoi && chezmoi init --apply",
   "customizations": {
