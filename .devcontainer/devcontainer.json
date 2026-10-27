@@ -5,6 +5,19 @@
     "context": ".."
   },
   "postCreateCommand": "mkdir -p ~/.local/share && ln -sfn ${containerWorkspaceFolder} ~/.local/share/chezmoi && chezmoi init --apply",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": "true",
+      "username": "vscode",
+			"userUid": "1000",
+			"userGid": "1000",
+      "upgradePackages": "true"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+			"version": "latest",
+			"ppa": "false"
+		}
+  },
   "customizations": {
     "vscode": {
     }
