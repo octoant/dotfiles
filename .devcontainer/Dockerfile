@@ -5,5 +5,6 @@ RUN apk update \
   && apk add --no-cache \
     curl \
     neovim \
+    neovim-doc \
     tree-sitter-cli \
     chezmoi
