@@ -1,10 +1,8 @@
 # syntax=docker/dockerfile:1
-FROM alpine:3.24
+FROM fedora:46
 
-RUN apk update \
-  && apk add --no-cache \
-    curl \
+RUN dnf install -y --setopt=install_weak_deps=False \
     neovim \
-    neovim-doc \
     tree-sitter-cli \
-    chezmoi
+    chezmoi \
+  && dnf clean all
