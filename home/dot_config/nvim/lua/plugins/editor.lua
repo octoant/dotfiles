@@ -1,5 +1,15 @@
 return {
   {
+    "snacks.nvim",
+    opts = {
+      explorer = { enabled = true },
+    },
+    keys = {
+      { "<leader>fE", function() Snacks.explorer() end, desc = "Explorer Snacks (cwd)" },
+      { "<leader>E", "<leader>fE", desc = "Explorer Snacks (cwd)", remap = true },
+    }
+  },
+  {
     "folke/which-key.nvim",
     event = "VeryLazy",
     keys = {
@@ -38,15 +48,6 @@ return {
 
   {
     "folke/trouble.nvim",
-    opts = {
-      modes = {
-        lsp = {
-          win = {
-            position = "right"
-          }
-        }
-      }
-    },
     cmd = { "Trouble" },
     keys = {
       { "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Diagnostics (Trouble)" },
@@ -83,13 +84,20 @@ return {
         end,
         desc = "Next Trouble/Quickfix Item",
       },
-    }
+    },
+    opts = {
+      modes = {
+        lsp = {
+          win = {
+            position = "right"
+          }
+        }
+      }
+    },
   },
 
   {
     "folke/todo-comments.nvim",
-    dependencies = { "plenary.nvim" },
-    opts = {},
     event = "VeryLazy",
     cmd = { "TodoTrouble" },
     keys = {
@@ -97,6 +105,8 @@ return {
       { "[t", function() require("todo-comments").jump_prev() end, desc = "Previous Todo Comment" },
       { "<leader>xt", "<cmd>Trouble todo toggle<cr>", desc = "Todo (Trouble)" },
       { "<leader>xT", "<cmd>Trouble todo toggle filter = {tag = {TODO,FIX,FIXME}}<cr>", desc = "Todo/Fix/Fixme (Trouble)" },
-    }
+    },
+    dependencies = { "plenary.nvim" },
+    opts = {}
   }
 }

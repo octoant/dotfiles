@@ -4,6 +4,15 @@ return {
     version = "*",
     event = "VeryLazy",
     dependencies = { "mini.icons" },
+    opts = {
+      options = {
+        offsets = {
+          {
+            filetype = "snacks_layout_box"
+          }
+        }
+      }
+    }
   },
   {
     "nvim-lualine/lualine.nvim",
