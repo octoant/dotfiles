@@ -2,13 +2,25 @@ return {
   {
     "snacks.nvim",
     opts = {
-      explorer = { enabled = true },
+      explorer = {},
+      picker = {
+        sources = {
+          explorer = {
+            layout = {
+              -- Hide the input window (search bar) by default.
+              -- It will only appear when search is activated (e.g. by pressing `/`).
+              auto_hide = { "input" }
+            }
+          }
+        }
+      }
     },
     keys = {
-      { "<leader>fE", function() Snacks.explorer() end, desc = "Explorer Snacks (cwd)" },
-      { "<leader>E", "<leader>fE", desc = "Explorer Snacks (cwd)", remap = true },
+      { "<leader>fe", function() Snacks.explorer() end, desc = "Explorer Snacks (cwd)" },
+      { "<leader>e", "<leader>fe", desc = "Explorer Snacks (cwd)", remap = true },
     }
   },
+
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
